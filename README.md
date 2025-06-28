@@ -7,6 +7,8 @@ FROM
 ![Screenshot 2025-06-27 135805](https://github.com/user-attachments/assets/ebf72669-ff12-46c0-a008-259cb9231425)
 
 
+### SELECT, WHERE, ORDER BY, GROUP BY
+
 **SELECT 
     CustomerName, State, city
 FROM
@@ -43,6 +45,7 @@ GROUP BY State;**
 
 ![Screenshot 2025-06-28 171127](https://github.com/user-attachments/assets/48b073d8-572b-4314-b0aa-0369ebd00315)
 
+** 
 
 
 
