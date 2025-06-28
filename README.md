@@ -8,8 +8,11 @@ FROM
 
 
 **SELECT 
-    CustomerName
+    CustomerName, State, city
 FROM
-    ecommerce.orders;**
+    ecommerce.orders**
+
+![Screenshot 2025-06-28 171054](https://github.com/user-attachments/assets/e3f1998e-267d-423a-b691-2230ecbae4a9)
+
 
     
