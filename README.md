@@ -8,6 +8,31 @@ FROM
     
 ![Screenshot 2025-06-27 135805](https://github.com/user-attachments/assets/ebf72669-ff12-46c0-a008-259cb9231425)
 
+**SELECT 
+    CustomerName
+FROM
+    ecommerce.orders;**
+
+![Screenshot 2025-06-28 173828](https://github.com/user-attachments/assets/b2761a26-ba69-4905-a765-b269aeb9059a)
+
+**SELECT 
+    State
+FROM
+    ecommerce.orders;**
+
+![Screenshot 2025-06-28 173921](https://github.com/user-attachments/assets/62d35e19-1b67-4dd5-b7da-c22db9e035df)
+
+**SELECT 
+    city
+FROM
+    ecommerce.orders;**
+
+![Screenshot 2025-06-28 174021](https://github.com/user-attachments/assets/23c39ed6-6454-469d-9c12-c569e30b5eb0)
+
+
+
+
+
 
 ### SELECT, WHERE, ORDER BY, GROUP BY
 
@@ -38,6 +63,22 @@ WHERE
     `Order Date` = '10-03-2018';**
 
 ![Screenshot 2025-06-28 171107](https://github.com/user-attachments/assets/4170ff07-179a-41a1-9148-2f777c2f695a)
+
+**SELECT 
+    COUNT(`Order ID`) AS Total_Orders
+FROM
+    ecommerce.orders;**
+
+![Screenshot 2025-06-28 174158](https://github.com/user-attachments/assets/7e9d6461-402c-4691-9164-d15a95fc7d19)
+
+**SELECT 
+    COUNT(DISTINCT CustomerName) AS UniqueCustomers
+FROM
+    ecommerce.orders;**
+
+![image](https://github.com/user-attachments/assets/50713d51-e1be-4db8-849f-23644caca5dc)
+
+
 
 **SELECT 
     State, COUNT(`Order ID`) AS OrderpereachState
