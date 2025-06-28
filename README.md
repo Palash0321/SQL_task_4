@@ -4,4 +4,12 @@
 FROM
     ecommerce.orders;**
     
-![Screenshot 2025-06-27 135747](https://github.com/user-attachments/assets/ac0362e0-b42c-4606-80a4-78f675353941)
+![Screenshot 2025-06-27 135805](https://github.com/user-attachments/assets/ebf72669-ff12-46c0-a008-259cb9231425)
+
+
+**SELECT 
+    CustomerName
+FROM
+    ecommerce.orders;**
+
+    
