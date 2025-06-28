@@ -131,6 +131,133 @@ FROM
 
 ![Screenshot 2025-06-28 171443](https://github.com/user-attachments/assets/44d96860-2cd7-478c-96b4-75f478686056)
 
+### DETAILS TABLE:
+**SELECT 
+    *
+FROM
+    ecommerce.details;**
+
+![Screenshot 2025-06-27 135747](https://github.com/user-attachments/assets/a0503295-8a87-4f47-a288-c1a152fad5fe)
+
+**SELECT 
+    `Order ID`
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/1bd9f470-4bc8-435a-abba-055507a51681)
+
+**SELECT 
+    `Sub-category`
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/12f3be3b-0a63-49b7-a825-81129640a6c0)
+
+**SELECT 
+    Amount
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/abaaa058-1b7e-4eae-8742-8612613ca93e)
+
+**SELECT 
+    Profit
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/058f4bd2-0b4b-45fd-b37e-f283219e6390)
+
+**SELECT 
+    Quantity
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/3d13ff86-4a38-40aa-b692-70acdb9eb491)
+
+**SELECT 
+    Category
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/56b65a82-cdce-4a1c-8e17-84dc54529e48)
+
+**SELECT 
+    PaymentMode
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/64f93e40-c509-417b-b11d-094158d80494)
+
+**SELECT DISTINCT
+    PaymentMode
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/a0f9e856-52b0-478c-ab63-4cbcbc22745c)
+
+**SELECT DISTINCT
+    Category
+FROM
+    ecommerce.details;**
+
+![image](https://github.com/user-attachments/assets/ba481804-bdbf-4d8a-aad1-b7db443c9a97)
+
+### SELECT, WHERE, ORDER BY, GROUP BY
+### **AGGREGATE FUNCTIONS (SUM, COUNT, AVERAGE, MAX)**
+
+**SELECT 
+    Category, SUM(Amount) AS Total_Amount
+FROM
+    ecommerce.details
+GROUP BY Category;**
+
+![image](https://github.com/user-attachments/assets/9f21df60-27cf-4df3-a0db-ba47f57f1c54)
+
+**SELECT 
+    *
+FROM
+    ecommerce.details
+WHERE
+    Amount >= 1000
+ORDER BY Amount DESC;**
+
+![image](https://github.com/user-attachments/assets/756c8bdc-6f72-474c-8ee0-072492c6b229)
+
+**SELECT 
+    *
+FROM
+    ecommerce.details
+WHERE
+    `Order ID` = 'B-25681';**
+
+![image](https://github.com/user-attachments/assets/190e891d-b239-428b-97a1-e566077fc721)
+
+**I used AND OPERATOR IN THIS QUERY**
+**SELECT 
+    *
+FROM
+    ecommerce.details
+WHERE
+    Category = 'Electronics'
+        AND Profit > 500;**
+
+![image](https://github.com/user-attachments/assets/c511b3d5-7b84-4e17-92c6-1aae61dba8e4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
