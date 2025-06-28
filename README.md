@@ -30,7 +30,7 @@ FROM
 ![Screenshot 2025-06-28 174021](https://github.com/user-attachments/assets/23c39ed6-6454-469d-9c12-c569e30b5eb0)
 
 
-### SELECT, WHERE, ORDER BY, GROUP BY
+### SELECT, WHERE, ORDER BY, GROUP BY, HAVING
 ### **AGGREGATION FUNCTIONS (COUNT)**
 
 **SELECT 
@@ -202,7 +202,7 @@ FROM
 
 ![image](https://github.com/user-attachments/assets/ba481804-bdbf-4d8a-aad1-b7db443c9a97)
 
-### SELECT, WHERE, ORDER BY, GROUP BY
+### SELECT, WHERE, ORDER BY, GROUP BY, HAVING
 ### **AGGREGATE FUNCTIONS (SUM, COUNT, AVERAGE, MAX)**
 
 **SELECT 
@@ -232,7 +232,8 @@ WHERE
 
 ![image](https://github.com/user-attachments/assets/190e891d-b239-428b-97a1-e566077fc721)
 
-**I used AND OPERATOR IN THIS QUERY**
+**I USED AND OPERATOR IN THIS QUERY**
+
 **SELECT 
     *
 FROM
@@ -242,6 +243,135 @@ WHERE
         AND Profit > 500;**
 
 ![image](https://github.com/user-attachments/assets/c511b3d5-7b84-4e17-92c6-1aae61dba8e4)
+
+**SELECT 
+    `Order ID`, SUM(Profit) AS Total_Profit
+FROM
+    ecommerce.details
+GROUP BY `Order ID`;**
+
+![image](https://github.com/user-attachments/assets/beae8f22-cc23-4e9f-abf4-b4b50e2d40c4)
+
+**SELECT 
+    PaymentMode, AVG(Amount) AS Total_Amount
+FROM
+    ecommerce.details
+GROUP BY PaymentMode;**
+
+![image](https://github.com/user-attachments/assets/1be866e2-2218-488c-873b-84fa42b02ef6)
+
+**SELECT 
+    Category, SUM(Quantity) AS Total_Quantity
+FROM
+    ecommerce.details
+GROUP BY Category;**
+
+![image](https://github.com/user-attachments/assets/b21cb625-bca9-4f02-b068-8a7952f5d4c3)
+
+**SELECT 
+    `Sub-Category`, AVG(Profit) AS Average_Profit
+FROM
+    ecommerce.details
+GROUP BY `Sub-Category`
+HAVING AVG(Profit) > 100;**
+
+![image](https://github.com/user-attachments/assets/ffbe5401-8c08-4ece-8de6-901f2f3a0c71)
+
+**SELECT 
+    `Order ID`, COUNT(Category)
+FROM
+    ecommerce.details
+GROUP BY `Order ID`;**
+
+![image](https://github.com/user-attachments/assets/1369e4fd-3a62-4970-b3c5-247775bd1e75)
+
+## **SUB-QUERIES**
+**SELECT 
+    `Order ID`, Amount
+FROM
+    ecommerce.details
+WHERE
+    Amount > (SELECT 
+            AVG(Amount)
+        FROM
+            ecommerce.details);**
+
+![image](https://github.com/user-attachments/assets/ba54f554-1447-4087-b016-3d104bca103a)
+
+**SELECT 
+    Category, `Sub-Category`
+FROM
+    ecommerce.details
+WHERE
+    Quantity > (SELECT 
+            MAX(Quantity)
+        FROM
+            ecommerce.details
+        WHERE
+            Category = 'Electronics');**
+
+![image](https://github.com/user-attachments/assets/a570be4a-9436-462f-a963-8aaf45e3d7cb)
+
+## **VIEW**
+
+**CREATE VIEW CategorySummary AS
+    SELECT 
+        Category,
+        SUM(Amount) AS Total_Amount,
+        SUM(Profit) AS Total_Profit
+    FROM
+        ecommerce.details
+    GROUP BY Category;
+SELECT 
+    *
+FROM
+    categorysummary;**
+
+![image](https://github.com/user-attachments/assets/f35f0d6a-38e7-4434-b915-74215a23f094)
+
+**CREATE VIEW PaymentModeSummary AS
+    SELECT 
+        PaymentMode,
+        AVG(Profit) AS Average_Profit,
+        AVG(Quantity) AS Average_Quantity
+    FROM
+        ecommerce.details
+    GROUP BY PaymentMode;
+SELECT 
+    *
+FROM
+    PaymentModesummary;**
+
+![image](https://github.com/user-attachments/assets/6e3f80ee-3528-4eff-a929-e89d0a9739df)
+
+## **JOINS** (INNER JOIN, LEFT JOIN)
+
+**SELECT 
+    O.`Order ID`,
+    O.CustomerName,
+    O.`Order Date`,
+    D.Amount,
+    D.Profit
+FROM
+    ecommerce.orders O
+        INNER JOIN
+    ecommerce.details D ON O.`Order ID` = D.`Order ID`;**
+
+![image](https://github.com/user-attachments/assets/86eb7f5a-9649-4ae8-8c20-b04160496e5d)
+
+**SELECT 
+    orders.CustomerName, details.Category
+FROM
+    ecommerce.orders
+        INNER JOIN
+    ecommerce.details ON orders.`Order ID` = details.`Order ID`;**
+
+![image](https://github.com/user-attachments/assets/24521cc3-aaac-4bb5-9cda-64417b496b3f)
+
+
+
+
+
 
 
 
