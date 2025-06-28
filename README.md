@@ -45,7 +45,31 @@ GROUP BY State;**
 
 ![Screenshot 2025-06-28 171127](https://github.com/user-attachments/assets/48b073d8-572b-4314-b0aa-0369ebd00315)
 
-** 
+**SELECT 
+    city, COUNT(`Order ID`) AS OrderPerCity
+FROM
+    ecommerce.orders
+GROUP BY city
+HAVING COUNT(`Order ID`) > 20;**
+
+![Screenshot 2025-06-28 171411](https://github.com/user-attachments/assets/6e0e32f1-7327-45dc-b1e8-27ccdf693efc)
+
+### VIEW
+
+**CREATE VIEW CityOrderCount AS
+    SELECT 
+        city, COUNT(`Order ID`) AS Numoforders
+    FROM
+        ecommerce.orders
+    GROUP BY city;
+SELECT 
+    *
+FROM
+    CityOrderCount;**
+
+![Screenshot 2025-06-28 171426](https://github.com/user-attachments/assets/1166586a-be0f-4484-9562-bf1cd96bae7b)
+
+
 
 
 
