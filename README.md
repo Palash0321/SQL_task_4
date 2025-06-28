@@ -94,6 +94,16 @@ HAVING COUNT(`Order ID`) > 20;**
 
 ![Screenshot 2025-06-28 171411](https://github.com/user-attachments/assets/6e0e32f1-7327-45dc-b1e8-27ccdf693efc)
 
+**SELECT 
+    State, COUNT(DISTINCT city) AS UniqueCity
+FROM
+    ecommerce.orders
+    GROUP BY State;**
+
+![image](https://github.com/user-attachments/assets/e7695937-2aa5-48bc-aa35-2a5610ff6bf0)
+
+
+
 ### VIEW
 
 **CREATE VIEW CityOrderCount AS
