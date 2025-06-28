@@ -1,5 +1,5 @@
 # SQL_task_4
-### DETAILS TABLE:
+### ORDERS TABLE:
 
 **SELECT 
     *
