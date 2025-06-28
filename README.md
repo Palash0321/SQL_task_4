@@ -1,4 +1,6 @@
 # SQL_task_4
+### DETAILS TABLE:
+
 **SELECT 
     *
 FROM
@@ -68,6 +70,19 @@ FROM
     CityOrderCount;**
 
 ![Screenshot 2025-06-28 171426](https://github.com/user-attachments/assets/1166586a-be0f-4484-9562-bf1cd96bae7b)
+
+**CREATE VIEW UniqueCustomerLocations AS
+    SELECT DISTINCT
+        CustomerName, State
+    FROM
+        ecommerce.orders;
+SELECT 
+    *
+FROM
+    UniqueCustomerLocations;**
+
+![Screenshot 2025-06-28 171443](https://github.com/user-attachments/assets/44d96860-2cd7-478c-96b4-75f478686056)
+
 
 
 
