@@ -368,7 +368,34 @@ FROM
 
 ![image](https://github.com/user-attachments/assets/24521cc3-aaac-4bb5-9cda-64417b496b3f)
 
+**SELECT 
+    O.`Order ID`,
+    O.CustomerName,
+    O.`Order Date`,
+    D.Amount,
+    D.Profit
+FROM
+    ecommerce.orders O
+        LEFT JOIN
+    ecommerce.details D ON O.`Order ID` = D.`Order ID`;**
 
+![image](https://github.com/user-attachments/assets/9496d317-4b64-43a3-b83e-95cfd3c202d5)
+
+## **I USED CASE**
+
+**SELECT
+    O.`Order ID`,
+    O.CustomerName,
+    CASE
+	WHEN D.`Order ID` IS NULL THEN  'No matching details found'
+    ELSE 'Details Available'
+    END AS 'OrderDetailsStatus'
+FROM
+    ecommerce.orders O
+LEFT JOIN
+    ecommerce.details D ON O.`Order ID` = D.`Order ID`;**
+
+![image](https://github.com/user-attachments/assets/94bde860-08b9-4c9c-8030-548b6329d172)
 
 
 
