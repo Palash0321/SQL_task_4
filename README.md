@@ -30,11 +30,8 @@ FROM
 ![Screenshot 2025-06-28 174021](https://github.com/user-attachments/assets/23c39ed6-6454-469d-9c12-c569e30b5eb0)
 
 
-
-
-
-
 ### SELECT, WHERE, ORDER BY, GROUP BY
+###**AGGREGATION FUNCTIONS (COUNT)**
 
 **SELECT 
     CustomerName, State, city
